@@ -196,7 +196,8 @@ var scrollOffset = 0;
 
 function animate() {
   requestAnimationFrame(animate);
-  c.clearRect(0, 0, canvas.width, canvas.height);
+  c.fillStyle = 'white';
+  c.fillRect(0, 0, canvas.width, canvas.height);
   platforms.forEach(function (platform) {
     platform.draw();
   });
