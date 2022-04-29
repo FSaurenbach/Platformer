@@ -1,13 +1,14 @@
-import background from '../img/background.png'
-import hills from '../img/hills.png'
-import platform from '../img/platform.png'
-import player_img from '../img/player.png'
+
 const canvas = document.querySelector('canvas')
 canvas.width = innerWidth
 canvas.height = innerHeight
 let space_pressed = 0
 const c = canvas.getContext('2d')
 const gravity = 5
+import background from '../img/background.png'
+import hills from '../img/hills.png'
+import platform from '../img/platform.png'
+import player_img from '../img/player.png'
 function createImage(imageSrc){
 	const image = new Image()
 	image.src = imageSrc	
