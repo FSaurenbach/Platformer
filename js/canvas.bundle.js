@@ -121,7 +121,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "ffab39d3487de561be1a081fcfb3806d.png");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "f2c07734b7dbb251bf21b79d5bc1ddce.png");
 
 /***/ }),
 
@@ -348,7 +348,6 @@ function animate() {
 
   if (player.position.y > 600) {
     won = false;
-    console.log(won);
     init();
   }
 }
