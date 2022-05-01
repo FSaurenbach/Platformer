@@ -9,32 +9,29 @@ module.exports = {
     filename: './js/canvas.bundle.js'
   },
   module: {
-    rules: [
-      {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
+    rules: [{
+      test: /\.m?js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
         }
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader'
-          }
-        ]
       }
-    ]
+    }, {
+      test: /\.(png|jpe?g|gif)$/i,
+      use: [{
+        loader: 'file-loader'
+      }]
+    }]
   },
   plugins: [
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      server: { baseDir: ['dist'] },
+      server: {
+        baseDir: ['dist']
+      },
       files: ['./dist/*'],
       notify: false
     }),
